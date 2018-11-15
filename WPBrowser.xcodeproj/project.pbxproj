@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		524CAD26219DB3E60014980B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524CAD25219DB3E60014980B /* AppDelegate.swift */; };
-		524CAD28219DB3E60014980B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524CAD27219DB3E60014980B /* ViewController.swift */; };
 		524CAD2B219DB3E60014980B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 524CAD29219DB3E60014980B /* Main.storyboard */; };
 		524CAD2D219DB3ED0014980B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 524CAD2C219DB3ED0014980B /* Assets.xcassets */; };
 		524CAD30219DB3ED0014980B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 524CAD2E219DB3ED0014980B /* LaunchScreen.storyboard */; };
 		524CAD3B219DB3ED0014980B /* WPBrowserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524CAD3A219DB3ED0014980B /* WPBrowserTests.swift */; };
 		524CAD46219DB3ED0014980B /* WPBrowserUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524CAD45219DB3ED0014980B /* WPBrowserUITests.swift */; };
+		524CAD54219DB5480014980B /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524CAD53219DB5480014980B /* NewsViewController.swift */; };
+		524CAD57219DB83B0014980B /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524CAD55219DB83B0014980B /* NewsCell.swift */; };
+		524CAD58219DB83B0014980B /* NewsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 524CAD56219DB83B0014980B /* NewsCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +38,6 @@
 /* Begin PBXFileReference section */
 		524CAD22219DB3E60014980B /* WPBrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WPBrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		524CAD25219DB3E60014980B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		524CAD27219DB3E60014980B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		524CAD2A219DB3E60014980B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		524CAD2C219DB3ED0014980B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		524CAD2F219DB3ED0014980B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +48,9 @@
 		524CAD41219DB3ED0014980B /* WPBrowserUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WPBrowserUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		524CAD45219DB3ED0014980B /* WPBrowserUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WPBrowserUITests.swift; sourceTree = "<group>"; };
 		524CAD47219DB3ED0014980B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		524CAD53219DB5480014980B /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
+		524CAD55219DB83B0014980B /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
+		524CAD56219DB83B0014980B /* NewsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,11 +102,13 @@
 			isa = PBXGroup;
 			children = (
 				524CAD25219DB3E60014980B /* AppDelegate.swift */,
-				524CAD27219DB3E60014980B /* ViewController.swift */,
 				524CAD29219DB3E60014980B /* Main.storyboard */,
 				524CAD2C219DB3ED0014980B /* Assets.xcassets */,
 				524CAD2E219DB3ED0014980B /* LaunchScreen.storyboard */,
 				524CAD31219DB3ED0014980B /* Info.plist */,
+				524CAD53219DB5480014980B /* NewsViewController.swift */,
+				524CAD55219DB83B0014980B /* NewsCell.swift */,
+				524CAD56219DB83B0014980B /* NewsCell.xib */,
 			);
 			path = WPBrowser;
 			sourceTree = "<group>";
@@ -231,6 +237,7 @@
 			files = (
 				524CAD30219DB3ED0014980B /* LaunchScreen.storyboard in Resources */,
 				524CAD2D219DB3ED0014980B /* Assets.xcassets in Resources */,
+				524CAD58219DB83B0014980B /* NewsCell.xib in Resources */,
 				524CAD2B219DB3E60014980B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -256,8 +263,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				524CAD28219DB3E60014980B /* ViewController.swift in Sources */,
 				524CAD26219DB3E60014980B /* AppDelegate.swift in Sources */,
+				524CAD57219DB83B0014980B /* NewsCell.swift in Sources */,
+				524CAD54219DB5480014980B /* NewsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
