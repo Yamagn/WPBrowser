@@ -43,6 +43,10 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="dateLabel" destination="4AC-8H-p0r" id="LRP-pi-loc"/>
+                <outlet property="titleLabel" destination="fkk-cB-vkA" id="h6F-fW-iox"/>
+            </connections>
             <point key="canvasLocation" x="132.80000000000001" y="129.08545727136433"/>
         </tableViewCell>
         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vNx-vf-tFL">
