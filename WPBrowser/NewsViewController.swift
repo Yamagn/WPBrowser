@@ -95,7 +95,7 @@ class NewsViewController: UIViewController, UITableViewDelegate, UITableViewData
         let data = dataList[indexPath.row]
         
         // 日付のデータと記事のタイトルを取得
-        cell.dateLabel.text = data.date
+        cell.dateLabel.text = data.dateString
         cell.titleLabel.text = data.title.rendered
         
         // セルのインスタンスを返す
