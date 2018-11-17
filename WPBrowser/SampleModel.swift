@@ -9,8 +9,8 @@
 import Foundation
 
 struct SampleModel: Codable {
-    var link: String = "" // 記事のURL
     var date: String = "" // 記事公開日
+    var link: String = "" // 記事のURL
     
     var title: SampleTitleModel = SampleTitleModel() // 記事のタイトル
     struct SampleTitleModel: Codable {

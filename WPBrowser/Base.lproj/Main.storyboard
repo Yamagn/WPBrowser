@@ -22,8 +22,8 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
-                                    <outlet property="dataSource" destination="3pt-dn-LhP" id="GLF-51-HN7"/>
-                                    <outlet property="delegate" destination="3pt-dn-LhP" id="o37-Xl-Whh"/>
+                                    <outlet property="dataSource" destination="3pt-dn-LhP" id="97w-UD-8bb"/>
+                                    <outlet property="delegate" destination="3pt-dn-LhP" id="ERE-QC-zqi"/>
                                 </connections>
                             </tableView>
                         </subviews>
@@ -38,7 +38,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Be9-2p-jvB"/>
                     <connections>
-                        <outlet property="tableView" destination="Isy-PW-4iX" id="Ykp-a7-QRB"/>
+                        <outlet property="tableView" destination="Isy-PW-4iX" id="mGg-tQ-1e0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UYM-Xo-9yt" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -70,6 +70,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="GUR-gS-d71" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="K7m-BM-1Bl">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
