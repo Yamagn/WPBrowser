@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class NewsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var dataList:[SampleModel] = [] // データモデルを格納する配列を追加
@@ -39,7 +40,7 @@ class NewsViewController: UIViewController, UITableViewDelegate, UITableViewData
         let session = URLSession(configuration: config)
         
         // 接続するURLを指定
-        let url = URL(string: "https://student-engineer.net/wp-json/wp/v2/posts/")
+        let url = URL(string: "https://liginc.co.jp/wp-json/wp/v2/posts/")
         
         // 通信処理タスクを設定
         let task = session.dataTask(with: url!) {(data, response, error) in
@@ -101,15 +102,22 @@ class NewsViewController: UIViewController, UITableViewDelegate, UITableViewData
         // セルのインスタンスを返す
         return cell
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // セルの選択を解除
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        // データを取り出す
+        let data = dataList[indexPath.row]
+        
+        // 記事のURLを取得する
+        if let url = URL(string: data.link) {
+            // SFSafariViewControllerのインスタンスを作成
+            let controller: SFSafariViewController = SFSafariViewController(url: url)
+            
+            // 次の画面へ遷移して、表示する
+            self.present(controller, animated: true, completion: nil)
+        }
     }
-    */
 
 }
