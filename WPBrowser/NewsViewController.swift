@@ -31,6 +31,9 @@ class NewsViewController: UIViewController, UITableViewDelegate, UITableViewData
         super.didReceiveMemoryWarning()
     }
     
+    @IBAction func onNotificationSettingButtonTapped(_ sender: Any) {
+        performSegue(withIdentifier: "MoveNotificationSettingView", sender: nil)
+    }
     // MARK: -
     func reloadListDatas() {
         // セッション用のコンフィグを設定・今回はデフォルト

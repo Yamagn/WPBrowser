@@ -16,6 +16,7 @@
 		524CAD54219DB5480014980B /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524CAD53219DB5480014980B /* NewsViewController.swift */; };
 		524CAD57219DB83B0014980B /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524CAD55219DB83B0014980B /* NewsCell.swift */; };
 		524CAD58219DB83B0014980B /* NewsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 524CAD56219DB83B0014980B /* NewsCell.xib */; };
+		524D579F21A7F1C8003FD9B7 /* NotificationSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524D579E21A7F1C8003FD9B7 /* NotificationSettingViewController.swift */; };
 		52CB4431219FF71500135702 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CB4430219FF71500135702 /* SearchViewController.swift */; };
 		52CB4433219FFB1E00135702 /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CB4432219FFB1E00135702 /* SearchResultViewController.swift */; };
 		52E849FE219E9FEA00D3FC61 /* SampleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E849FD219E9FEA00D3FC61 /* SampleModel.swift */; };
@@ -54,6 +55,7 @@
 		524CAD53219DB5480014980B /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		524CAD55219DB83B0014980B /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
 		524CAD56219DB83B0014980B /* NewsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsCell.xib; sourceTree = "<group>"; };
+		524D579E21A7F1C8003FD9B7 /* NotificationSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSettingViewController.swift; sourceTree = "<group>"; };
 		52CB4430219FF71500135702 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		52CB4432219FFB1E00135702 /* SearchResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultViewController.swift; sourceTree = "<group>"; };
 		52E849FD219E9FEA00D3FC61 /* SampleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleModel.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				52E849FD219E9FEA00D3FC61 /* SampleModel.swift */,
 				52CB4430219FF71500135702 /* SearchViewController.swift */,
 				52CB4432219FFB1E00135702 /* SearchResultViewController.swift */,
+				524D579E21A7F1C8003FD9B7 /* NotificationSettingViewController.swift */,
 			);
 			path = WPBrowser;
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				524D579F21A7F1C8003FD9B7 /* NotificationSettingViewController.swift in Sources */,
 				52CB4431219FF71500135702 /* SearchViewController.swift in Sources */,
 				524CAD26219DB3E60014980B /* AppDelegate.swift in Sources */,
 				52CB4433219FFB1E00135702 /* SearchResultViewController.swift in Sources */,
