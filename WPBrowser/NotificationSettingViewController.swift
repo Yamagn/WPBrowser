@@ -15,7 +15,24 @@ class NotificationSettingViewController: UIViewController {
     @IBOutlet weak var notificationButton: UIButton!
     
     
-    @IBAction func onNotificationSwitchValueChanged(_ sender: Any) {
+    @IBAction func onNotificationSwitchValueChanged(_ sender: UISwitch) {
+        if sender.isOn {
+            // ボタン、UIDatePickerを有効にする
+            datePicker.isEnabled = true
+            notificationButton.isEnabled = true
+        } else {
+            // ボタン、UIDatePickerを無効にする
+            datePicker.isEnabled = false
+            notificationButton.isEnabled = false
+            
+            // 予定されている通知を解除する
+            UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
+            
+            // 通知を解除した旨の表示を行う
+            let controller = UIAlertController(title: nil, message: "通知を解除しました", preferredStyle: UIAlertController.Style.alert)
+            controller.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.cancel, handler: nil))
+            present(controller, animated: true, completion: nil)
+        }
     }
     
     @IBAction func onNotificationButtonTapped(_ sender: Any) {
@@ -96,19 +113,31 @@ class NotificationSettingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        // ナビゲーションバーにタイトルを入れる
+        self.title = "通知設定"
+        
+        // 通知を管理するオブジェクトを一旦オフ・操作不可にする
+        notificationSwitch.isOn = false
+        datePicker.isEnabled = false
+        notificationButton.isEnabled = false
+        
+        // これから予定されている通知を取得
+        UNUserNotificationCenter.current().getPendingNotificationRequests{ (requests) in
+            
+            // これから予定されている通知がある＝通知の設定は行われている
+            if requests.count > 0 {
+                
+                // UIの変更を伴うので、メインスレッドで処理を行わせる
+                DispatchQueue.main.async {
+                    // スイッチをオンに変更
+                    self.notificationSwitch.isOn = true
+                    
+                    // 時間の変更、通知設定のボタン押下を行えるようにする
+                    self.datePicker.isEnabled = true
+                    self.notificationButton.isEnabled = true
+                }
+            }
+        }
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
